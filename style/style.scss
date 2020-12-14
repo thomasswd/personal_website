@@ -13,9 +13,7 @@ html {
 }
 
 body {
-    //font-size: 10px;
     font-family: 'Titillium Web', sans-serif;
-    overflow-x: hidden;
 }
 
 a {
@@ -72,7 +70,6 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        //position: relative;
         background-color: $color-1-primary;
         color: $color-4;
         z-index: 2;
@@ -101,7 +98,7 @@ ul {
 
         a {
             width: 100%;
-            height: 33.33vh;
+            //height: 33.33vh;
             background: white;
             position: relative;
             z-index: 2;
@@ -154,9 +151,9 @@ ul {
 
         .nav-projects {
             //background: $offwhite-2;
-            transform: scaleY(1.05);
+            //transform: scaleY(1.05);
             border-left: 5px solid $accent-2;
-            height: 33.5vh;
+            //height: 33.5vh;
             h2 {
                 color: $accent-2;
             }
@@ -182,22 +179,21 @@ ul {
 }
 
 .main-decoration {
-    height: 200%;
-    width: 150%;
-    max-height: 70rem;
-    max-width: 70rem;
+    height: 50rem;
+    width: 50rem;
     background: rgba(57, 67, 89, 0.7);
     position: absolute;
-    top: 0;
-    left: -20rem;
-    border-radius: 10rem;
+    top: 10%;
+    left: 8%;
+    border-radius: 5rem;
     transform: rotate(45deg) ;
     z-index: -2;
+    transition: all 0.2s;
 }
 
 .container {
     margin: 0 auto;
-    padding: 5rem 10rem;
+    padding: 5rem 0rem;
 }
 
 .flex-container {
@@ -291,6 +287,7 @@ ul {
         width: 100%;
         max-width: 80rem;
         margin: 0 auto;
+        padding: 0 3rem;
 
         h2 {
             text-align: center;
@@ -386,7 +383,7 @@ ul {
 }
 
 .project-container {
-    width: 100%;
+    width: 90%;
     max-width: 90rem;
     margin: 0 auto;
 }
@@ -518,10 +515,10 @@ ul {
     }
 
     .controls {
-        position: absolute;
-        top: 5rem;
+        // position: absolute;
+        // top: 5rem;
+        // width: 100%;
         z-index: 10;
-        width: 100%;
 
         button {
             height: 40rem;
@@ -552,12 +549,18 @@ ul {
         }
 
         &--next {
-            transform: translateX(90.5%);
+            //transform: translateX(90.5%);
             //width: fit-content;
+            position: absolute;
+            top: 5rem;
+            right: 9.5%;
         }
 
         &--prev {
-            transform: translateX(0px)
+            //transform: translateX(0px)
+            position: absolute;
+            top: 5rem;
+            left: 0;
         }
 
         // .goToNext {
@@ -730,6 +733,11 @@ ul {
 
 @media (max-width: 1440px) {
 
+    .main-decoration {
+        height: 40rem;
+        width: 40rem;
+    }
+
     .about {
         &__desc {
             &-text {
@@ -781,6 +789,13 @@ ul {
 }
 
 @media (max-width: 1024px) {
+
+    .main-decoration {
+        height: 40rem;
+        width: 40rem;
+        left: 0;
+    }
+
     .projects {
 
         &-tabs {
@@ -813,11 +828,18 @@ ul {
 @media (max-width: 768px) {
 
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .container {
         padding: 5rem 5rem;
+    }
+
+    .main-decoration {
+        height: 30rem;
+        width: 30rem;
+        left: -5%;
+        top: 20%;
     }
 
     .about {
@@ -852,7 +874,31 @@ ul {
 @media (max-width: 576px) {
 
     html {
-        font-size: 10px;
+        font-size: 12px;
+    }
+
+    .home {
+        flex-direction: column;
+
+        .main-box {
+            width: 100%;
+            height: 75%;
+        }
+
+        .main-nav {
+            flex-direction: row;
+            width: 100%;
+            height: 25%;
+
+            .nav-item {
+                height: 100%;
+            }
+        }
+    }
+
+    .main-decoration {
+        left: 10%;
+        top: 20%;
     }
 
     .container {

@@ -12,7 +12,6 @@ html {
 
 body {
   font-family: 'Titillium Web', sans-serif;
-  overflow-x: hidden;
 }
 
 a {
@@ -111,7 +110,6 @@ ul {
 
 .home .main-nav a {
   width: 100%;
-  height: 33.33vh;
   background: white;
   position: relative;
   z-index: 2;
@@ -171,10 +169,7 @@ ul {
 }
 
 .home .main-nav .nav-projects {
-  -webkit-transform: scaleY(1.05);
-          transform: scaleY(1.05);
   border-left: 5px solid #335cff;
-  height: 33.5vh;
 }
 
 .home .main-nav .nav-projects h2 {
@@ -198,23 +193,23 @@ ul {
 }
 
 .main-decoration {
-  height: 200%;
-  width: 150%;
-  max-height: 70rem;
-  max-width: 70rem;
+  height: 50rem;
+  width: 50rem;
   background: rgba(57, 67, 89, 0.7);
   position: absolute;
-  top: 0;
-  left: -20rem;
-  border-radius: 10rem;
+  top: 10%;
+  left: 8%;
+  border-radius: 5rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   z-index: -2;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .container {
   margin: 0 auto;
-  padding: 5rem 10rem;
+  padding: 5rem 0rem;
 }
 
 .flex-container {
@@ -332,6 +327,7 @@ ul {
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
+  padding: 0 3rem;
 }
 
 .about__skills h2 {
@@ -440,7 +436,7 @@ ul {
 }
 
 .project-container {
-  width: 100%;
+  width: 90%;
   max-width: 90rem;
   margin: 0 auto;
 }
@@ -588,10 +584,7 @@ ul {
 }
 
 .project-slider .controls {
-  position: absolute;
-  top: 5rem;
   z-index: 10;
-  width: 100%;
 }
 
 .project-slider .controls button {
@@ -625,13 +618,15 @@ ul {
 }
 
 .project-slider .controls--next {
-  -webkit-transform: translateX(90.5%);
-          transform: translateX(90.5%);
+  position: absolute;
+  top: 5rem;
+  right: 9.5%;
 }
 
 .project-slider .controls--prev {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  position: absolute;
+  top: 5rem;
+  left: 0;
 }
 
 .project-desc {
@@ -824,6 +819,10 @@ ul {
 }
 
 @media (max-width: 1440px) {
+  .main-decoration {
+    height: 40rem;
+    width: 40rem;
+  }
   .about__desc-text {
     width: 80%;
     max-width: 100rem;
@@ -862,6 +861,11 @@ ul {
 }
 
 @media (max-width: 1024px) {
+  .main-decoration {
+    height: 40rem;
+    width: 40rem;
+    left: 0;
+  }
   .projects-tabs ul li {
     max-height: 11rem;
   }
@@ -882,10 +886,16 @@ ul {
 
 @media (max-width: 768px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
   .container {
     padding: 5rem 5rem;
+  }
+  .main-decoration {
+    height: 30rem;
+    width: 30rem;
+    left: -5%;
+    top: 20%;
   }
   .about__desc-text {
     width: 90%;
@@ -900,7 +910,32 @@ ul {
 
 @media (max-width: 576px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
+  }
+  .home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .main-box {
+    width: 100%;
+    height: 75%;
+  }
+  .home .main-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 25%;
+  }
+  .home .main-nav .nav-item {
+    height: 100%;
+  }
+  .main-decoration {
+    left: 10%;
+    top: 20%;
   }
   .container {
     padding: 3rem 2rem;
