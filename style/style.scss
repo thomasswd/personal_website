@@ -292,38 +292,33 @@ ul {
         h2 {
             text-align: center;
         }
+    }
 
-        &-list {
-            list-style: none;
-            width: 100%;
-            max-width: 80rem;
-            margin: 0 auto;
+    &__list {
+        list-style: none;
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
 
-            .skills {
-                display: flex;
-                justify-content: space-between;
-            }
+        .skills {
+            display: flex;
+            justify-content: space-between;
+        }
 
-            .skill {
-                margin-bottom: 2rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-            }
+        .skill {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
 
-            i {
-                font-size: 4.3rem;
-                margin: auto;
-            }
+        svg {
+            width: 5rem;
+            height: 5rem;
+        }
 
-            svg {
-                width: 5rem;
-                height: 5rem;
-            }
-
-            p {
-                font-size: 1.5rem;
-            }
+        p {
+            font-size: 1.5rem;
         }
     }
 
@@ -562,10 +557,6 @@ ul {
             top: 5rem;
             left: 0;
         }
-
-        // .goToNext {
-        //     transform: translateX(91%)
-        // }
     }
 }
 
@@ -782,7 +773,7 @@ ul {
             top: 0;
 
             &--next {
-                transform: translateX(92%);
+                right: 7%;
             }
         }
     }
@@ -819,7 +810,7 @@ ul {
 
         .controls {
             &--next {
-                transform: translateX(87%);
+                right: 10%;
             }
         }
     }
@@ -863,12 +854,12 @@ ul {
         }
     }
 
-    // .project-slider {
+    .project-slider {
 
-    //     .controls {
-            
-    //     }
-    // }
+        .controls {
+            right: 13%;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -882,7 +873,7 @@ ul {
 
         .main-box {
             width: 100%;
-            height: 75%;
+            height: 100%;
         }
 
         .main-nav {
@@ -896,9 +887,24 @@ ul {
         }
     }
 
+    .about {
+        &__list {
+            p {
+                font-size: 1rem;
+            }
+
+            svg {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
     .main-decoration {
         left: 10%;
         top: 20%;
+        width: 20rem;
+        height: 20rem;
     }
 
     .container {
@@ -909,7 +915,7 @@ ul {
 
         .controls {
             &--next {
-                transform: translateX(89%);
+                right: 15%;
             }
         }
     }
@@ -920,7 +926,7 @@ ul {
 
         .controls {
             &--next {
-                transform: translateX(83%);
+                right: 22%;
             }
         }
     }
