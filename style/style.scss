@@ -310,6 +310,7 @@ ul {
             display: flex;
             flex-direction: column;
             align-items: center; 
+            text-align: center;
         }
 
         svg {
@@ -319,6 +320,7 @@ ul {
 
         p {
             font-size: 1.5rem;
+            text-align: center;
         }
     }
 
@@ -480,6 +482,13 @@ ul {
             opacity: 100%;
             transition: all 0.3s;
         }
+
+        &--single {
+            transform: translateX(0%);
+            font-size: 2rem;
+            padding: 0 2rem;
+            text-align: center;
+        }
     }
 
     .slide:hover .img-desc{
@@ -570,6 +579,7 @@ ul {
         padding: 0.2rem 0.5rem;
         transition: all 0.2s;
         border-radius: 10px;
+        //margin-bottom: 3rem;
     }
 
     .project__link:hover {
@@ -912,7 +922,6 @@ ul {
     }
 
     .project-slider {
-
         .controls {
             &--next {
                 right: 15%;
@@ -921,7 +930,8 @@ ul {
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 375px) {
+
     .project-slider {
 
         .controls {

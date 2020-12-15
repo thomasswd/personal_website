@@ -6,7 +6,7 @@ const Slider = (slider) => {
 
     if (!(slider instanceof Element)) {
         throw new Error('No slider passed in');
-      }
+    }
     
     let current;
     let prev;
@@ -14,22 +14,18 @@ const Slider = (slider) => {
 
     const startSlider = () => {
         current = slider.querySelector('.current');
-        prev = current.previousElementSibling || slider.lastElementChild;
+        prev = current.previousElementSibling || slides.lastElementChild;
         next = current.nextElementSibling;
-
-        //console.log(current, prev, next)
     }
 
     const applyClasses = () => {
         current.classList.add('current');
         prev.classList.add('prev');
         next.classList.add('next');
-        //console.log(prev)
-        //console.log(next)
     }
 
     const goTo = (slideDir) => {
-        console.log(slideDir)
+        //console.log(slideDir)
 
         const classesToRemove = ['current', 'prev', 'next']
 
@@ -54,18 +50,16 @@ const Slider = (slider) => {
     const prevButton = slider.querySelector('.goToPrev')
 
     startSlider();
+    if(!prev || !next) return;
     applyClasses();
 
     nextButton.addEventListener('click', goTo)
     prevButton.addEventListener('click', () => goTo('prev'))
-
-    console.log(nextButton)
-    console.log(prevButton)
 }
 
 const brewSlider = Slider(document.querySelector('.brew-slider'))
 const countriesSlider = Slider(document.querySelector('.countries-slider'))
-const portfolioSlider = Slider(document.querySelector('.portfolio-slider'))
+//const portfolioSlider = Slider(document.querySelector('.portfolio-slider'))
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
