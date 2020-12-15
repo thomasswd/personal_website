@@ -496,6 +496,8 @@ ul {
   position: relative;
   z-index: 11;
   color: #faf4d0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .project-slider h3 {
@@ -917,6 +919,9 @@ ul {
 @media (max-width: 576px) {
   html {
     font-size: 12px;
+  }
+  .header-nav-list {
+    width: 75%;
   }
   .home {
     -webkit-box-orient: vertical;

@@ -441,6 +441,7 @@ ul {
     position: relative;
     z-index: 11;
     color: $color-4;
+    transition: all 0.3s;
 
     h3 {
         text-align: center;
@@ -876,6 +877,10 @@ ul {
 
     html {
         font-size: 12px;
+    }
+
+    .header-nav-list {
+        width: 75%;
     }
 
     .home {
